@@ -42,7 +42,7 @@ create index im_timesheet_popups_user_idx on im_timesheet_popups  (user_id);
 
 select im_component_plugin__new (
         null,                                   -- plugin_id
-        'acs_object',                           -- object_type
+        'im_component_plugin',                           -- object_type
         now(),                                  -- creation_date
         null,                                   -- creation_user
         null,                                   -- creattion_ip
