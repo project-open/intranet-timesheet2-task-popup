@@ -57,7 +57,7 @@ ad_proc -public im_timesheet_task_popup_task_select { {default_task_id ""} } {
     Returns a select box with all tasks for the current
     user.
 } {
-    set user_id [ad_get_user_id]
+    set user_id [ad_conn user_id]
     if {0 == $user_id} { return "" }
 
     set julian_date [db_string sysdate_as_julian "select to_char(sysdate,'J') from dual"]
