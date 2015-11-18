@@ -218,4 +218,4 @@ if { [empty_string_p $results] } {
     append results "<option value=\"\">[_ intranet-timesheet2.lt_There_are_currently_n_1]</option>\n"
 }
 
-set export_form_vars [export_form_vars julian_date return_url]
+set export_form_vars [export_vars -form {julian_date return_url}]

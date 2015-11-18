@@ -41,7 +41,7 @@ ad_proc -public im_timesheet_task_popup_component { } {
     return "
 <form method=POST action=/intranet-timesheet2-task-popup/new-2>
 <input type=text name=note size=12 value=\"Timesheet\" onClick=\"javascript:this.value = ''\">
-[export_form_vars return_url]
+[export_vars -form {return_url}]
 <select name=project_task_id>
 [im_timesheet_task_popup_task_select]
 </select>
