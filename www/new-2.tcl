@@ -37,7 +37,7 @@ regexp {([0-9]+)\-([0-9]+)} $project_task_id match project_id timesheet_task_id
 # ----------------------------------------------------------
 
 # Check if this entry is coming from a project without a
-# timesheet task already defined:
+# Gantt task already defined:
 if {"" == $timesheet_task_id || 0 == $timesheet_task_id} {
     set timesheet_task_id [db_string existing_default_task "
                 select  task_id
