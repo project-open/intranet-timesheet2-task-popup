@@ -15,12 +15,7 @@ ad_library {
 
 
 ad_proc -public im_timesheet_task_popup_id { } {
-    Returns the ID of the current package. Please
-    not that there is no "_pg" in the procedure name.
-    This is in order to keep the rest of the system
-    identical, no matter whether it's a PostgreSQL
-    TSearch2 implementation of search or an Oracle
-    Intermedia implementation.
+    Returns the ID of the current package.
 } {
     return [db_string im_package_search_id {
         select package_id from apm_packages
